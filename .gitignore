@@ -1,0 +1,18 @@
+# IDE
+.idea/
+*.iml
+*.sln.ide
+_ReSharper.*
+*.user
+*.suo
+
+# .NET
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+.nuget/
+*.exe
+*.pdb
+
+TestResults/
+coverage/
