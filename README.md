@@ -20,9 +20,9 @@ If the API doesn't have homeworld data on a character, it returns `unknown`. For
 
 ### Age sorting
 
-Because each character is only meant to appear once, but many characters appear in multiple movies (and have multiple valid ages), I decided to sort based on absolute age rather than movie-relative age. I chose an arbitrary date in the past (4000 BBY, long live KOTOR) and generated a timespan relative to that date.
+Because each character is only meant to appear once, but many characters appear in multiple movies (and have multiple valid ages), I decided to sort based on absolute age rather than movie-relative age. I chose an arbitrary date in the future (4000 ABY) and generated a timespan relative to that date.
 
-You did not specify whether to sort by age descending or ascending, so age is sorted descending. The sorting algorithm itself sorts age ascending, but because the relative age is compared to a time in the past, characters with a lower relative age are actually older. I didn't choose to do it this way specifically - it's just a consequence of how I chose to handle dates. Since dates in Star Wars are arbitrary and count in two directions from an event in the middle of the narrative, any choice would have included some tradeoffs.
+You did not specify whether to sort by age descending or ascending, so age is sorted ascending. In my submission, the ages were sorted descending, but I changed this for consistency.
 
 #### Unknown age
 
