@@ -141,7 +141,7 @@ namespace UnitTests.Services.PeopleServiceTests
 
 			var result = await service.GetPersonData(string.Empty, 1);
 
-			Assert.Equal(3981, result.Result.Age);
+			Assert.Equal(4019f, result.Result.Age);
 		}
 
 		[Fact]
@@ -251,7 +251,7 @@ namespace UnitTests.Services.PeopleServiceTests
 		}
 
 		[Fact]
-		public async Task ReturnsBaseAgeMinusYearIfBBY()
+		public async Task ReturnsBaseAgePlusYearIfBBY()
 		{
 			var swapi = ServiceMockFactory.SWAPISevice(_defaultPerson);
 			var films = ServiceMockFactory.FilmService();
@@ -264,11 +264,11 @@ namespace UnitTests.Services.PeopleServiceTests
 			);
 
 			var result = await service.GetPersonData(string.Empty, 1);
-			Assert.Equal(3981f, result.Result.Age);
+			Assert.Equal(4019f, result.Result.Age);
 		}
 
 		[Fact]
-		public async Task ReturnsBaseAgePlusYearIfABY()
+		public async Task ReturnsBaseAgeMinusYearIfABY()
 		{
 			_defaultPerson.BirthYear = "19ABY";
 			var swapi = ServiceMockFactory.SWAPISevice(_defaultPerson);
@@ -282,7 +282,7 @@ namespace UnitTests.Services.PeopleServiceTests
 			);
 
 			var result = await service.GetPersonData(string.Empty, 1);
-			Assert.Equal(4019f, result.Result.Age);
+			Assert.Equal(3981f, result.Result.Age);
 		}
 	}
 }

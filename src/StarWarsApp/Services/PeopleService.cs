@@ -126,8 +126,8 @@ namespace StarWarsApp.Services
 			var year = float.Parse(yearNumber);
 
 			return yearType == "BBY"
-				? baseAge - year
-				: baseAge + year;
+				? baseAge + year
+				: baseAge - year;
 		}
 	}
 }
